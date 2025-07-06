@@ -10,9 +10,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="h-full bg-slate-200">
+  <body
+    class="min-h-screen bg-gradient-to-br from-slate-200 via-white to-slate-300 flex flex-col"
+  >
     <Header />
-    <div class="flex h-h-full grow justify-center text-4xl text-black">WIP</div>
+    <main class="flex flex-1 flex-col items-center justify-center px-4">
+      <section
+        class="bg-white/80 rounded-xl shadow-lg p-10 flex flex-col items-center gap-6 max-w-xl w-full mt-12"
+      >
+        <!-- Avatar/Profile Image Placeholder -->
+        <div
+          class="w-28 h-28 rounded-full bg-slate-300 flex items-center justify-center shadow-md mb-2"
+        >
+        </div>
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-slate-900 capitalize text-center caps"
+        >
+          Welcome to my corner of the internet.
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 text-center">
+          Crafting code, capturing moments, and telling stories through <span
+            class="font-semibold text-slate-900">development</span
+          >, <span class="font-semibold text-slate-900">photography</span>, and <span
+            class="font-semibold text-slate-900">videography</span
+          >.
+        </p>
+        <a
+          href="/portfolio"
+          class="mt-6 inline-block bg-slate-900 text-white px-6 py-3 rounded-lg shadow hover:bg-slate-700 transition font-semibold text-lg"
+        >
+          View My Work
+        </a>
+      </section>
+    </main>
     <Footer />
   </body>
 </html>
