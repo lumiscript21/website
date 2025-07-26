@@ -1,6 +1,5 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import { isActionError } from 'astro:actions';
 
 type Props = HTMLAttributes<'a'>;
 
@@ -10,6 +9,6 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 ---
 
-<a href={href} class={isActive ? 'text-slate-800 font-extrabold' : 'text-slate-500 transition duration-300 transform-y-1'} {...props}>
+<a href={href} class={isActive ? 'text-slate-800 font-bold' : 'hover:text-slate-500'} {...props}>
 	<slot />
 </a>

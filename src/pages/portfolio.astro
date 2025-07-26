@@ -1,3 +1,22 @@
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo unde veniam
-tempore nam repellendus, molestias laborum id adipisci nihil laboriosam deleniti
-dolor, et consectetur rerum, sed aperiam voluptate? Sapiente, laudantium.
+---
+import "../styles/global.css";
+import Layout from '../layouts/BlogPost.astro';
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+
+const description = "This is my description";
+---
+
+<Header />
+
+<p class="p-4 flex justify-center w-full text-4xl text-slate-500">Check out my work</p>
+
+<div class="p-4 flex flex-wrap gap-4">
+  <Card title="Things" description={description} />
+  <Card title="New things" description={description} />
+  <Card title="New things" description={description} />
+  <Card title="New things" description={description} />
+  <Card title="New things" description={description} />
+  <Card title="New things" description={description} />
+</div>

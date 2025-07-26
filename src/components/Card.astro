@@ -1,0 +1,80 @@
+---
+const { title, description } = Astro.props;
+---
+
+ <!-- Main Card Container -->
+  <div class="
+    bg-white               
+    rounded-lg             
+    shadow-lg              
+    overflow-hidden        
+    max-w-sm               
+    w-1/3
+    mx-auto                
+    flex                   
+    flex-col               
+  ">
+    <!-- Card Media/Image (Optional, but common in MUI cards) -->
+    <div class="relative h-48 w-full bg-gray-200">
+      <!-- Placeholder image for demonstration -->
+      <img
+        src="https://placehold.co/600x400/E0E0E0/424242?text=Card+Image"
+        alt="Card Media"
+        class="absolute inset-0 w-full h-full object-cover"
+        onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0E0E0/424242?text=Image+Error';"
+      >
+      <!-- Optional: Overlay for text on image -->
+      <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
+        <h3 class="text-xl font-semibold">Image Title</h3>
+      </div>
+    </div>
+
+    <!-- Card Content Area -->
+    <div class="p-6">
+      <h2 class="
+        text-2xl          
+        font-bold         
+        text-gray-900     
+        mb-2              
+      ">
+        {title}
+      </h2>
+      <p class="
+        text-gray-700    
+        text-base        
+        mb-4             
+      ">
+      {description}
+      </p>
+    </div>
+
+    <!-- Card Actions Area -->
+    <div class="
+      px-6              
+      pb-4              
+      pt-0              
+      flex              
+      justify-end       
+      space-x-2         
+      border-t          
+      border-gray-200   
+      mt-auto           
+    ">
+      <!-- Action Button 1 (Outlined/Text-like) -->
+      <button class="
+        text-blue-600      
+        hover:bg-blue-50   
+        font-medium        
+        py-2               
+        px-4               
+        rounded-md         
+        transition-colors  
+        duration-200       
+        focus:outline-none 
+        focus:ring-2       
+        focus:ring-blue-300
+      ">
+        Go See It!
+      </button>
+    </div>
+  </div>
